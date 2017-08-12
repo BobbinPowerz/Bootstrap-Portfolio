@@ -1,98 +1,60 @@
-* {
-	box-sizing: border-box;
-	text-align: center;
-}
-
-#main {
-	max-width: 960px;
-	margin: 20px auto;
-	 
-}
-
-html, body {
-	height: 100%;
-}
-
 body {
 	background-image: url("../images/bgsmall.png");
-	display: flex;
-	flex-direction: column;
+	font-family:'Times New Roman', Georgia, Times, Serif;
+	padding-bottom: 100px;
 }
 
-#content {
-	flex: 1 0 auto;
+.container-fluid {
+	max-width: 980px;
 }
 
-.header {
-	color: green;
-	background-color: #ffffff;
-	margin-top: 0;
-	border-bottom: 3px solid #cccccc;
+#header {
+	border-bottom: solid 3px #cccccc;
+	 background-color: #ffffff;
+	font: 20px Aerial, sans-serif;
 }
 
-a#logo {
-	color: #ffffff;	
+#brand {
+	background-color: #4aaaa5; 
+	color: #ffffff; 
 	font-weight: bolder;
-	font: 30px Aerial, sans-serif;
+	font: 25px Aerila, sans-serif;
+	animation-name: logo;
+	animation-duration: 4s; 
 }
 
-ul {
-	list-style-type: none;
-	margin: 0 auto;
-	overflow: hidden;
-	max-width: 960px;
+@keyframes logo {
+    from {background-color: #4aaaa5;}
+    to {background-color:#DCD688;}
 }
 
-li {
-	display: block;
-	float: right;
-	padding: 27px 5px 0 5px; 
-	font-family: "Times New Roman", Georgia, Times, Serif; 
-} 
-
-
-li:last-child {
-	float:left;
-	padding: 20px 20px;
-	background-color: #4aaaa5;
+@keyframes titles {
+    from {color: #4aaaa5;}
+    to {color:#DCD688;}
 }
 
-a:link {
-	text-decoration: none;
+.container {
+	max-width: 980px;
 }
 
-a {
-	font: 20px aerial, sans-serif;
-	color: #cccccc; 
-}
-
-.sec {
+#sec {
 	background-color: #ffffff;
-	width: 650px;
-	float:left;
-	overflow: hidden;
-	padding:;
-	margin-bottom: 10px;
-	display: inline-block;
-	margin: 20px 15px 20px 0;
+	padding:0 10px 20px 10px;
 }
 
-.sec p:last-child {
-	padding-bottom: 20px;
-}
-
-.sec h1 {
+#sec h1 {
 	font: 25px aerial, sans-serif;
 	font-weight: bolder;
 	color: #4aaaa5;
-	border-bottom: 3px solid #dddddd;
-	padding: 20px;
+	border-bottom: 2px solid #cccccc;
+	padding: 15px 5px;
 	text-align: left;
+	animation-name: titles;
+	animation-duration: 4s;
 }
 
-.sec #mug {
-	float: left;
-	padding: 25px 20px 5px 20px;
+#mug {
+	padding: 20px 20px 5px 30px;
 }
 
 p {
@@ -103,77 +65,31 @@ p {
 	padding: 10px 30px 0 30px;
 }
 
-.sidebar {
-	display: inline-block;
-	background-color: #ffffff;
-	width: 270px;
-	float: left;
-	overflow: hidden;
-	padding: 0;
-	margin: 20px 0 20px 20px;
-}
-
-.sidebar img {
-	margin: 20px 5px 30px 5px;
-}
-
-.sidebar h2 {
-	font: 25px aerial, sans-serif;
-	font-weight: bolder;
-	color: #4aaaa5;
-	border-bottom: 2px solid #cccccc;
-	padding: 20px;
-}
-
-
-footer {
-	font: 12px aerial, sans-serif;
-	background-color: #666666;
-	color: #ffffff;
-	border-top: 5px solid #4aaaa5;
-	margin:0;
-	padding: 30px 0;
-}
-
-
 #hangman {
-	display: inline-block;
-	margin: 30px 20px 10px 20px;
-	width: 280px;
-	height: 180px;
 	background-image: url("../images/ipad.jpg");
 }
 
 #rpg {
-	display: inline-block;
-	margin:30px 20px 10px 20px;
-	width: 280px;
-	height: 180px;
 	background-image: url("../images/turntable.jpg");
 }
 
 #trivia {
-	display: inline-block;
-	margin:20px;
-	width: 280px;
-	height: 180px;
 	background-image: url("../images/headphones.jpg");
 }
 
 #widget {
-	display: inline-block;
-	margin:20px;
-	width: 280px;
-	height: 180px;
 	background-image: url("../images/mp3.jpg");
 }
 
 #pgs {
-	display: inline-block;
-	margin:10px 20px 30px 20px;
-	width: 280px;
-	height: 180px;
 	background-image: url("../images/tv.jpg");
+}
+ 
+#pgs, #trivia, #rpg, #widget, #hangman {
+	display:inline-block;
+	margin: 10px;
+	width: 275px;
+	height: 180px;
 }
 
 h3 {
@@ -182,6 +98,7 @@ h3 {
 	padding: 15px 0;
 	background-color: #4aaaa5;
 	margin: 115px 0 5px 0;
+	text-align: center;
 }
 
 form {
@@ -191,6 +108,7 @@ form {
 	margin:10px;
 	text-align: left;
 }
+
 input {
 	width: 100%;
 	border: solid 1px #cccccc;
@@ -229,4 +147,37 @@ textarea {
 	height: 200px;
 	font: 16px aerial, sans-serif;
 	text-align: left;
+}
+
+#side-content {
+	background-color: #ffffff;
+	margin-top: 20px;
+	padding: 5px 10px 0 10px;
+}
+
+#side-content img {
+	margin: 10px 5px 30px 5px;
+}
+
+#side-content h1 {
+	font: 25px aerial, sans-serif;
+	font-weight: bolder;
+	color: #4aaaa5;
+	border-bottom: 2px solid #cccccc;
+	padding: 5px 5px 10px 5px;
+	text-align: left;
+	margin: 5px 0;
+	animation-name: titles;
+	animation-duration: 4s;
+}
+
+#footer-background {
+	background-color: #666666;
+	border-top: 5px solid #4aaaa5;
+}
+
+#footer-text {
+	font: 12px aerial, sans-serif;
+	color: #ffffff;
+	margin-left: 40%;
 }
